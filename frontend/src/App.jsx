@@ -19,7 +19,7 @@ const App = () => {
       <main className="max-w-5xl mx-auto px-4 py-8">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/product/:productId" element={<ProductPage />} />
           <Route
             path="/profile"
             element={isSignedIn ? <ProfilePage /> : <Navigate to="/" />}
@@ -29,7 +29,7 @@ const App = () => {
             element={isSignedIn ? <CreatePage /> : <Navigate to="/" />}
           />
           <Route
-            path="/edit/:id"
+            path="/edit/:productId"
             element={isSignedIn ? <EditProductPage /> : <Navigate to="/" />}
           />
         </Routes>
